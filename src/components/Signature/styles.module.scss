@@ -1,0 +1,19 @@
+.sigContainer {
+  position: fixed;
+
+  left: 0.5rem;
+  bottom: 0.5rem;
+  span {
+    color: var(--gray-500);
+  }
+  
+  a {
+    color: var(--gray-500);
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+}

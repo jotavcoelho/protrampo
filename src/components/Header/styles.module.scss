@@ -1,0 +1,34 @@
+.headerContainer {
+  height: 5rem;
+  border-bottom: 1px solid var(--gray-800);
+  background: var(--gray-950);
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  a {
+    position: absolute;
+    left: 60px;
+    
+    transition: filter 0.3s;
+    
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+  }
+}

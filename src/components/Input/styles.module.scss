@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    margin: 0 auto 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  textarea {
+    height: 320px;
+    width: 400px;
+    resize: none;
+
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--gray-100);
+    
+    color: var(--gray-100);
+
+    padding: 0.25rem 0.5rem;
+  }
+}
