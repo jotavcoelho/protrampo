@@ -1,0 +1,23 @@
+.standardButton {
+  height: 3rem;
+  width: 10rem;
+  margin: 1.5rem 4rem;
+  background-color: var(--deepblue-50);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border: 1px solid var(--deepblue-800);
+  border-radius: 0.5rem;
+  
+  color: var(--deepblue-900);
+  font-weight: bold;
+  font-size: 1.125rem;
+  
+  transition: filter 0.3s;
+  
+  &:hover {
+    filter: brightness(0.8);
+  }
+}

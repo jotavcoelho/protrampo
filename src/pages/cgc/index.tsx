@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styles from './styles.module.scss';
 
 import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
 
 import { refineGuiaValues, putCurrency } from '../../utils/guia/refineGuiaValues';
 import { subtractGuias } from '../../utils/guia/handleGuias';
@@ -99,7 +100,7 @@ export default function Cgc() {
             />
           </div>
 
-          <button type="submit">Calcular</button>
+          <Button type="submit">Calcular</Button>
         </form>
 
         {theresResult && 

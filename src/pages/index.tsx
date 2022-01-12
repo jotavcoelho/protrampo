@@ -1,4 +1,7 @@
 import Link from 'next/link';
+
+// import { Button } from '../components/Button';
+
 import styles from './home.module.scss';
 
 export default function Home() {
