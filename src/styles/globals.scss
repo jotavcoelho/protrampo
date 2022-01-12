@@ -16,22 +16,55 @@
   --gray-900: #121214;
   --gray-950: #101012;
   
-  --cyan-500: #61dafb;
   --yellow-500: #eba417;
 
-  --deepblue-900: #050014;
-  --deepblue-850: #090025;
-  --deepblue-800: #0F003D;
+  // --deepblue-900: #050014;
+  // --deepblue-850: #090025;
+  // --deepblue-800: #0F003D;
 
   --beige-200: #ECDED5;
   --beige-150: #F2E8E2;
   --beige-100: #F9F4F1;
 
+  --deepblue-50: #e2e3e9;
+  --deepblue-100: #b7baca;
+  --deepblue-200: #898ea6;
+  --deepblue-300: #5f6483;
+  --deepblue-400: #42476c;
+  --deepblue-500: #252b57;
+  --deepblue-600: #202650;
+  --deepblue-700: #191e47;
+  --deepblue-800: #12163b;
+  --deepblue-900: #090025;
+  --deepblue-950: #050014;
+
+  --cyan-50: #dbfef5;
+  --cyan-100: #a5fae2;
+  --cyan-200: #74f4d1;
+  --cyan-300: #4aeabf;
+  --cyan-400: #2ae0b1;
+  --cyan-500: #21d7a4;
+  --cyan-600: #1bc795;
+  --cyan-700: #15b484;
+  --cyan-800: #10a375;
+  --cyan-900: #118458;
+
+  --red-50: #e9dee0;
+  --red-100: #ddaeaf;
+  --red-200: #ca777c;
+  --red-300: #b83d4d;
+  --red-400: #ae0030;
+  --red-500: #a20018;
+  --red-600: #9a0015;
+  --red-700: #8f0011;
+  --red-800: #810008;
+  --red-900: #690000;
+
 }
 
 body {
-  background-color: var(--gray-900);
-  color: var(--white);
+  background-color: var(--deepblue-950);
+  color: var(--red-50);
 }
 
 body, input, textarea, select, button {
