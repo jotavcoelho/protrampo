@@ -16,12 +16,6 @@
   --gray-900: #121214;
   --gray-950: #101012;
   
-  --yellow-500: #eba417;
-
-  // --deepblue-900: #050014;
-  // --deepblue-850: #090025;
-  // --deepblue-800: #0F003D;
-
   --beige-200: #ECDED5;
   --beige-150: #F2E8E2;
   --beige-100: #F9F4F1;
@@ -37,6 +31,7 @@
   --deepblue-800: #12163b;
   --deepblue-900: #090025;
   --deepblue-950: #050014;
+  --deepblue-1k: #090010;
 
   --cyan-50: #dbfef5;
   --cyan-100: #a5fae2;
@@ -63,12 +58,14 @@
 }
 
 body {
-  background-color: var(--deepblue-950);
+  background-color: var(--deepblue-1k);
   color: var(--red-50);
 }
 
 body, input, textarea, select, button {
   font: 400 1rem "Roboto", sans-serif;
+  letter-spacing: 0.038rem;
+
 }
 
 button {

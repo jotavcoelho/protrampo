@@ -13,7 +13,7 @@ export default function Home() {
           <a>Carlos Wilson</a>
         </Link>
         <Link href="/cpf">
-          <a>Dígito Verif. de CPF</a>
+          <a>DV de CPF</a>
         </Link>
       </div>
     </div>
