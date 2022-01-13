@@ -91,6 +91,7 @@ export default function Cgc() {
               label="Guia 1" 
               value={guia1}
               onChange={event => setGuia1(event.target.value)}
+              autoFocus
             />
             <Input 
               name="guia2" 

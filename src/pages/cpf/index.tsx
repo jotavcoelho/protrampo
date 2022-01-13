@@ -44,6 +44,7 @@ export default function CWEaser() {
             onKeyUp={e => handleKeyUp(e)}
             value={lackingCpf}
             maxLength={9}
+            autoFocus
           />
           <Button type="submit">Descobrir DV</Button>
         </form>
