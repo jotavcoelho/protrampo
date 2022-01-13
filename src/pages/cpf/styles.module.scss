@@ -1,7 +1,7 @@
 .container {
   max-width: 1120px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 3rem 0;
 
   p + p {
     margin-top: 2rem;
@@ -15,27 +15,7 @@
   justify-content: center;
 
   button {
-    width: 10rem;
-    height: 3rem;
-
     margin: 4rem 0;
-
-    color: var(--gray-100);
-    
-    background-color: var(--gray-850);
-    border: 2px solid var(--gray-100);
-    border-radius: 1rem;
-
-    transition: filter 0.3s;
-
-    &:hover {
-      filter: brightness(0.8);
-    }
-
-    &:disabled {
-      filter: brightness(0.5);
-      cursor: not-allowed;
-    }
   }
 }
 

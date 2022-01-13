@@ -8,6 +8,7 @@ import { LilInput } from "../../components/LilInput";
 
 import styles from './styles.module.scss';
 import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 export default function CWEaser() {
   const [cwText, setCWText] = useState(``);
@@ -104,7 +105,7 @@ export default function CWEaser() {
                 />
               </div>
 
-              <button type="submit">Procurar</button>
+              <Button type="submit">Procurar</Button>
             </form>
           ) : (
             <form
@@ -120,7 +121,7 @@ export default function CWEaser() {
                   ref={textRef}
                 />
               </div>
-              <button disabled={!cwText} type="submit">Confirmar</button>
+              <Button disabled={!cwText} type="submit">Confirmar</Button>
             </form>
           )
         }

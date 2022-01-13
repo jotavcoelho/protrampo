@@ -6,6 +6,7 @@ import { LilInput } from "../../components/LilInput";
 import styles from './styles.module.scss';
 import { calcDV } from "../../utils/cpf/calcDV";
 import { cpfWOutDV } from "../../utils/cpf/mask";
+import { Button } from "../../components/Button";
 
 export default function CWEaser() {
   const [lackingCpf, setLackingCpf] = useState('');
@@ -44,7 +45,7 @@ export default function CWEaser() {
             value={lackingCpf}
             maxLength={9}
           />
-          <button type="submit">Calcular</button>
+          <Button type="submit">Descobrir DV</Button>
         </form>
         {fullCpf && 
           <div className={styles.fullCPFContainer}>
