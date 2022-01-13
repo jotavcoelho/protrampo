@@ -3,13 +3,12 @@
   width: 10rem;
   margin: 1.5rem 4rem;
   background-color: var(--deepblue-50);
-  box-sizing: content-box;
   
   display: flex;
   align-items: center;
   justify-content: center;
   
-  border: 1px solid var(--deepblue-800);
+  border: 1px solid var(--deepblue-1k);
   border-radius: 0.5rem;
   
   color: var(--deepblue-900);
@@ -19,7 +18,7 @@
   transition: all 0.3s;
 
   &:hover {
-    filter: brightness(1.1);
-    border: 2px solid var(--cyan-400)
+    filter: brightness(0.8);
+    border: 3px solid var(--cyan-400)
   }
 }

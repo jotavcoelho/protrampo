@@ -100,7 +100,7 @@ export default function Cgc() {
             />
           </div>
 
-          <Button type="submit">Calcular</Button>
+          <Button type="submit">Subtrair</Button>
         </form>
 
         {theresResult && 
