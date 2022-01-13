@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-// import { Button } from '../components/Button';
+import { Button } from '../components/Button';
 
 import styles from './home.module.scss';
 
@@ -18,6 +18,7 @@ export default function Home() {
         <Link href="/cpf">
           <a>DV de CPF</a>
         </Link>
+        <Button>Button</Button>
       </div>
     </div>
   )
