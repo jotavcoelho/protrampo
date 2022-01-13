@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { Button } from '../components/Button';
+import { ButtonLink } from '../components/ButtonLink';
 
 import styles from './home.module.scss';
 
@@ -8,17 +9,16 @@ export default function Home() {
   return (
     <div className={styles.contentContainer}>
       <div className={styles.listContainer}>
-        <Link href="/cgc">
-          <a>CGC</a>
+        <Link href="/cgc" passHref>
+          <ButtonLink>CGC</ButtonLink>
         </Link>
         {/* process.env.NODE_ENV && */}
-        <Link href="/cweaser">
-          <a>Carlos Wilson</a>
+        <Link href="/cweaser" passHref>
+          <ButtonLink>Carlos Wilson</ButtonLink>
         </Link>
-        <Link href="/cpf">
-          <a>DV de CPF</a>
+        <Link href="/cpf" passHref>
+          <ButtonLink>DV de CPF</ButtonLink>
         </Link>
-        <Button>Button</Button>
       </div>
     </div>
   )

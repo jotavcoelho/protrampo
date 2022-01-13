@@ -1,18 +1,21 @@
-import { ButtonHTMLAttributes } from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 
 import styles from './styles.module.scss';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-
+interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  
 }
 
-export function ButtonLink({ children, ...rest}: ButtonProps) {
-  return (
-    <button 
+export const ButtonLink = React.forwardRef<HTMLAnchorElement, AnchorProps>(
+  ({ children, onClick, href, ...rest}: AnchorProps, ref) => (
+    <a 
       className={styles.standardButton}
+      href={href}
+      onClick={onClick}
+      ref={ref}
       {...rest}
     >
       {children}
-    </button>
+    </a>
   )
-}
+)
