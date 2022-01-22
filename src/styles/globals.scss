@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  // box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -54,6 +54,11 @@
   --red-700: #8f0011;
   --red-800: #810008;
   --red-900: #690000;
+
+  --drbuttonbackground: #191f21;
+  --drbuttonborder: #383d3f;
+
+  --drfullbg: #0e0f10;
 
 }
 
