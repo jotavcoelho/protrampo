@@ -77,7 +77,7 @@ export default function Cgc() {
   return (
     <>
       <Head>
-        <title>Calc. de Guias Comp.</title>
+        <title>Calculador de Guias Complementares</title>
       </Head>
   
       <div className={styles.container}>

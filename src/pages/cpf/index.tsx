@@ -32,14 +32,14 @@ export default function CWEaser() {
   return (
     <>
       <Head>
-        <title>DV de CPF</title>
+        <title>Dígito Verificador de CPF</title>
       </Head>
 
       <div className={styles.container}>
         <form onSubmit={handleSubmit} className={styles.formContainer}>
           <LilInput 
             name='incompleteCPF' 
-            label="CPF sem DV" 
+            label="CPF sem Dígito Verificador" 
             onChange={e => handleChange(e)}
             onKeyUp={e => handleKeyUp(e)}
             value={lackingCpf}
