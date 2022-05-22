@@ -62,3 +62,14 @@ export function sumGuias(guia1: GuiaValues, guia2: GuiaValues): GuiaValuesString
 
   return resultingGuia;
 }
+
+export function calculateGuias (operation: string, guia1: GuiaValues, guia2: GuiaValues): GuiaValuesString {
+  // return (operation == 'Subtrair') ? subtractGuias(guia1, guia2) : sumGuias(guia1, guia2)
+  // operation should have only two possible values, I have to be careful about this
+  if (operation == 'Subtrair')
+    return subtractGuias(guia1, guia2)
+  else if (operation == 'Somar')
+    return sumGuias(guia1, guia2)
+  // else
+  //   console.log("operation is neither somar or subtrair")
+}

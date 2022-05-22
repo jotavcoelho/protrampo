@@ -7,7 +7,7 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
 import { refineGuiaValues, putCurrency } from '../../utils/guia/refineGuiaValues';
-import { subtractGuias } from '../../utils/guia/handleGuias';
+import { calculateGuias } from '../../utils/guia/handleGuias';
 
 interface CurrencyGuiaValues {
   emol: string;
@@ -67,9 +67,9 @@ export default function Cgc() {
       guiaValues: guia2Values
     } = refineGuiaValues(guia2);
 
-    const resultingNumberGuia = subtractGuias(guia1Values, guia2Values);
+    const resultingGuia = calculateGuias(operation, guia1Values, guia2Values);
 
-    const resultingCurrencyGuia = putCurrency(resultingNumberGuia);
+    const resultingCurrencyGuia = putCurrency(resultingGuia);
 
     setResult(resultingCurrencyGuia);
 
