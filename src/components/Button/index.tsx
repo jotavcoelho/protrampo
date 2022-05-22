@@ -11,7 +11,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ children, options, currentOption, setOption, ...rest }: ButtonProps) {
   const [activeDropdown, setActiveDropdown] = useState(false);
-  const [selectedOption, setselectedOption] = useState('');
 
   function handleActiveDropdown() {
     setActiveDropdown(!activeDropdown);

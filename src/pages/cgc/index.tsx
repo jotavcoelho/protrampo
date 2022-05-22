@@ -1,5 +1,6 @@
 import { useState, useRef, FormEvent, useEffect } from 'react';
 import Head from 'next/head';
+import { FaPlus, FaMinus } from 'react-icons/fa'
 
 import styles from './styles.module.scss';
 
@@ -95,6 +96,7 @@ export default function Cgc() {
               onChange={event => setGuia1(event.target.value)}
               autoFocus
             />
+            {(operation == 'Subtrair') ? <FaMinus /> : <FaPlus />}
             <Input 
               name="guia2" 
               label="Guia 2" 
