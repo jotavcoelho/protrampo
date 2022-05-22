@@ -23,6 +23,8 @@ export default function Cgc() {
   const [guia1, setGuia1] = useState('');
   const [guia2, setGuia2] = useState('');
 
+  const [operation, setOperation] = useState(false);
+
   const [result, setResult] = useState<CurrencyGuiaValues>({
     emol: '',
     tsnr: '',
@@ -53,7 +55,7 @@ export default function Cgc() {
       return;
     }
 
-    // theres' more validation to do, but it's not worth my time YET
+    // there's more validation to do, but it's not worth my time YET
 
     const { 
       guiaType: guia1Type, 
@@ -85,7 +87,7 @@ export default function Cgc() {
           onSubmit={handleSubmit} 
           className={styles.formContainer}
         >
-          <div>
+          <div className={styles.actualForm}>
             <Input 
               name="guia1" 
               label="Guia 1" 
@@ -101,7 +103,12 @@ export default function Cgc() {
             />
           </div>
 
-          <Button type="submit">Calcular</Button>
+          <Button 
+            type="submit"
+            options={['Somar', 'Subtrair']}
+          >
+            {operation ? 'Somar' : 'Subtrair'}
+          </Button>
         </form>
 
         {theresResult && 
