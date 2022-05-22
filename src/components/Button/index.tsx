@@ -6,14 +6,20 @@ import styles from './styles.module.scss';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   options?: string[];
   currentOption?: string;
+  setOption?: Function;
 }
 
-export function Button({ children, options, currentOption, ...rest }: ButtonProps) {
+export function Button({ children, options, currentOption, setOption, ...rest }: ButtonProps) {
   const [activeDropdown, setActiveDropdown] = useState(false);
-  // const [currentOption, setCurrentOption] = useState('');
+  const [selectedOption, setselectedOption] = useState('');
 
   function handleActiveDropdown() {
     setActiveDropdown(!activeDropdown);
+  }
+
+  function selectOption(clickedOption) {
+    setOption(clickedOption)
+    setActiveDropdown(false)
   }
 
   if (options) // the multi options button should actually be a div with the actual button inside it
@@ -30,7 +36,13 @@ export function Button({ children, options, currentOption, ...rest }: ButtonProp
           {options.filter(option => option != currentOption).map(option => {
             if (option != currentOption)
               return (
-                <div className="option" key={option}>{option}</div>
+                <div 
+                  className={styles.option} 
+                  key={option}
+                  onClick={() => selectOption(option)}
+                >
+                  {option}
+                </div>
               )
           })}
         </div>

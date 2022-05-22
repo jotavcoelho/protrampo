@@ -23,7 +23,7 @@ export default function Cgc() {
   const [guia1, setGuia1] = useState('');
   const [guia2, setGuia2] = useState('');
 
-  const [operation, setOperation] = useState(true);
+  const [operation, setOperation] = useState('Subtrair');
 
   const [result, setResult] = useState<CurrencyGuiaValues>({
     emol: '',
@@ -105,10 +105,11 @@ export default function Cgc() {
 
           <Button 
             type="submit"
-            options={['Somar', 'Subtrair']}
-            currentOption={operation ? 'Somar' : 'Subtrair'}
+            options={['Somar', 'Subtrair', '12', 'aijsheiou', 'asiuhe', 'iuashieuh']}
+            currentOption={operation}
+            setOption={setOperation}
           >
-            {operation ? 'Somar' : 'Subtrair'}
+            {operation}
           </Button>
         </form>
 

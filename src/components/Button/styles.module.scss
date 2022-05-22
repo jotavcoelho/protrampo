@@ -84,18 +84,42 @@
 .options {
   position: absolute;
   left: .25rem;
-  bottom: -90%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
 
+  // padding-top: 0.4rem;
+  
   width: 9.5rem;
-  height: 2.5rem;
-  background-color: var(--deepblue-500);
+  background-color: inherit;
   
   opacity: 0;
   pointer-events: none;
 
-
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.option {
+  height: 2.4rem;
+  width: 100%;
+  background-color: red;
+
+  margin-top: .2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: filter 150ms;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
 }
 
 .activeSelection {
