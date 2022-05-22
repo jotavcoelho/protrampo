@@ -27,3 +27,119 @@
     cursor: not-allowed;
   }
 }
+
+.optionsButtonContainer {
+  height: 3rem;
+  width: 10rem;
+  margin: 1.25rem 4rem;
+  background-color: var(--deepblue-50);
+
+  border: 1px solid var(--deepblue-1k);
+  border-radius: 0.5rem;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    
+  button {
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+
+    color: var(--deepblue-900);
+    font-weight: bold;
+    font-size: 1.125rem;
+
+    border: 0;
+    border-radius: 0.5rem;
+    
+    transition: filter 150ms;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.arrowContainer {
+  height: 100%;
+  width: 2rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--deepblue-50);
+  border-radius: .5rem;
+  border-left: 2px solid var(--deepblue-1k);
+
+  cursor: pointer;
+
+  svg {
+    color: var(--deepblue-1k)
+  }
+
+  transition: filter 150ms;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.options {
+  position: absolute;
+  left: .45rem;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 9rem;
+  background-color: var(--deepblue-100);
+
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.option {
+  height: 2.4rem;
+  width: 100%;
+  background-color: var(--deepblue-50);
+  // background-color: var(--deepblue-100);
+
+  color: var(--deepblue-900);
+  font-weight: 500;
+  font-size: 1rem;
+
+  margin-top: .1rem;
+
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: filter 150ms;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.activeSelection {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
