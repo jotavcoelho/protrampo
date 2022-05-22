@@ -30,7 +30,7 @@ export function Button({ children, options, currentOption, setOption, ...rest }:
           className={styles.arrowContainer}
           onClick={() => {handleActiveDropdown()}}
         >
-          <FaAngleDown color='black'/>
+          <FaAngleDown />
         </div>
         <div className={activeDropdown ? `${styles.options} ${styles.activeSelection}` : `${styles.options}`}>
           {options.filter(option => option != currentOption).map(option => {

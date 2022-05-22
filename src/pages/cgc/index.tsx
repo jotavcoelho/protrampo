@@ -105,7 +105,7 @@ export default function Cgc() {
 
           <Button 
             type="submit"
-            options={['Somar', 'Subtrair', '12', 'aijsheiou', 'asiuhe', 'iuashieuh']}
+            options={['Somar', 'Subtrair']}
             currentOption={operation}
             setOption={setOperation}
           >

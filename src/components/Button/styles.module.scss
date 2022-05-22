@@ -43,12 +43,17 @@
   align-items: center;
   justify-content: center;
 
+    
   button {
     height: 100%;
     width: 100%;
     background-color: inherit;
 
-    border: 1px solid var(--deepblue-1k);
+    color: var(--deepblue-900);
+    font-weight: bold;
+    font-size: 1.125rem;
+
+    border: 0;
     border-radius: 0.5rem;
     
     transition: filter 150ms;
@@ -60,18 +65,21 @@
 }
 
 .arrowContainer {
-  background-color: red;
   height: 100%;
   width: 2rem;
   
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  background-color: var(--deepblue-50);
+  border-radius: .5rem;
+  border-left: 2px solid var(--deepblue-1k);
 
   cursor: pointer;
 
   svg {
-    background-color: red;
+    color: var(--deepblue-1k)
   }
 
   transition: filter 150ms;
@@ -83,18 +91,18 @@
 
 .options {
   position: absolute;
-  left: .25rem;
+  left: .45rem;
   top: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
+  
+  width: 9rem;
+  background-color: var(--deepblue-100);
 
-  // padding-top: 0.4rem;
-  
-  width: 9.5rem;
-  background-color: inherit;
-  
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+
   opacity: 0;
   pointer-events: none;
 
@@ -105,9 +113,17 @@
 .option {
   height: 2.4rem;
   width: 100%;
-  background-color: red;
+  background-color: var(--deepblue-50);
+  // background-color: var(--deepblue-100);
 
-  margin-top: .2rem;
+  color: var(--deepblue-900);
+  // font-weight: bold;
+  font-size: 1rem;
+
+  margin-top: .1rem;
+
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
 
   display: flex;
   align-items: center;
