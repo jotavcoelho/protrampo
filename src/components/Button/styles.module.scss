@@ -32,7 +32,10 @@
   height: 3rem;
   width: 10rem;
   margin: 1.25rem 4rem;
-  // background-color: var(--deepblue-50);
+  background-color: var(--deepblue-50);
+
+  border: 1px solid var(--deepblue-1k);
+  border-radius: 0.5rem;
 
   position: relative;
 
@@ -43,9 +46,17 @@
   button {
     height: 100%;
     width: 100%;
+    background-color: inherit;
+
+    border: 1px solid var(--deepblue-1k);
+    border-radius: 0.5rem;
+    
+    transition: filter 150ms;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
-
-
 }
 
 .arrowContainer {
@@ -57,10 +68,13 @@
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+
   svg {
     background-color: red;
   }
-  cursor: pointer;
+
+  transition: filter 150ms;
 
   &:hover {
     filter: brightness(0.8);
@@ -70,14 +84,15 @@
 .options {
   position: absolute;
   left: .25rem;
-  bottom: -60%;
+  bottom: -90%;
 
   width: 9.5rem;
   height: 2.5rem;
-  background-color: yellow;
+  background-color: var(--deepblue-500);
   
   opacity: 0;
   pointer-events: none;
+
 
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;

@@ -5,14 +5,15 @@ import styles from './styles.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   options?: string[];
+  currentOption?: string;
 }
 
-export function Button({ children, options, ...rest }: ButtonProps) {
+export function Button({ children, options, currentOption, ...rest }: ButtonProps) {
   const [activeDropdown, setActiveDropdown] = useState(false);
+  // const [currentOption, setCurrentOption] = useState('');
 
   function handleActiveDropdown() {
     setActiveDropdown(!activeDropdown);
-    console.log(activeDropdown);
   }
 
   if (options) // the multi options button should actually be a div with the actual button inside it
@@ -26,7 +27,12 @@ export function Button({ children, options, ...rest }: ButtonProps) {
           <FaAngleDown color='black'/>
         </div>
         <div className={activeDropdown ? `${styles.options} ${styles.activeSelection}` : `${styles.options}`}>
-          options
+          {options.filter(option => option != currentOption).map(option => {
+            if (option != currentOption)
+              return (
+                <div className="option" key={option}>{option}</div>
+              )
+          })}
         </div>
       </div>
       // <button 
