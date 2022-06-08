@@ -1,14 +1,18 @@
 export function BRLToFloat(currValue: string): number {
   const dotLess = currValue.replace('.', '');
   const commaToDot = dotLess.replace(',', '.');
-  const currencyLess = commaToDot.slice(3);
-
+  const currencyLess = commaToDot.slice(2);
+  console.log(`currencyless = ${currencyLess}`)
+  console.log(`currencyless to Number = ${Number(currencyLess)}`)
   return Number(currencyLess);
 
   // this is one of some examples of "writing for understandability"
   // I'm pretty sure this whole function could've been "simply":
   //   return currValue.replace('.', '').replace(',', '.').commaToDot.slice(3)
   // but this would be horrible to read/understand if I ever needed to for debugging
+  // hell yeah, the one writing this line is me 5 months later fixing a bug, and damn
+  // it would've probably taken hours to understand what, because of the understandability, has taken me only minutes
+  // and the bug was completely fixed, I love this
 }
 
 export function floatToBRL(value: string): string {
