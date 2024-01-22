@@ -26,7 +26,7 @@ export function findActsContainingBlock(block: number, cwArray: string[]): strin
 
 export function findApartmentInBlock(apto: number, actsContainingBlock: string[]): string[] {
   const searchParamsRaw = String
-    .raw`((apartamento\s[n.º]*\s?0*${apto}\W)|(Apt[oº°]*\.?\s0*${apto}\W))`;
+    .raw`((apartamento\s[n.º°]*\s?0*${apto}\W)|(Apt[oº°]*\.?\s0*${apto}\W))`;
   const searchParamsRegEx = new RegExp(searchParamsRaw, 'i');
 
   const apartmentActs = actsContainingBlock.filter(act => {
@@ -36,7 +36,7 @@ export function findApartmentInBlock(apto: number, actsContainingBlock: string[]
   console.log(apartmentActs);
 
   const fakeAptCheckRaw = String
-    .raw`((apartamento\s[n.º]*\s?0*(?:(?!${apto}).)\d?\d?\d\W)|(Apt[oº°]*\.?\s0*(?:(?!${apto}).)\d?\d?\d\W)).*(residente|limit).*((apartamento\s[n.º]*\s?0*${apto}\W)|(Apt[oº°]*\.?\s0*${apto}\W))`;
+    .raw`((apartamento\s[n.º°]*\s?0*(?:(?!${apto}).)\d?\d?\d\W)|(Apt[oº°]*\.?\s0*(?:(?!${apto}).)\d?\d?\d\W)).*(residente|limit).*((apartamento\s[n.º]*\s?0*${apto}\W)|(Apt[oº°]*\.?\s0*${apto}\W))`;
       // I have to find a way of making this smaller, what the hell, there must be something
       // maybe if I divide each part of the regex into different variables
       // gonna try later, first we have to make sure it works
